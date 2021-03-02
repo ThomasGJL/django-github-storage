@@ -264,21 +264,25 @@ class FileSystemStorage(Storage):
         #print('sha==============' + str(sha))
 
         if sha == 'None':
-            d = {"message": "upload content", "committer": {"name": "user", "email": "user@cn.ibm.com"}, "content": self.fn_base64(image_path)}
+            d = {"message": "upload content", "committer": {"name": "user", "email": "user@gmail.com"}, "content": self.fn_base64(image_path)}
             r = requests.put(url = url, data = json.dumps(d), headers=headers)
             rs = r.status_code
             if rs == 201:
-                print('upload success')
+                #print('update success')
+                pass
             else:
-                print('status==============' + str(rs) + "---------------------------"+ str(r.text))
+                #print('status==============' + str(rs) + "---------------------------"+ str(r.text))
+                print('update error')
         else:
-            d = {"message": "update content", "committer": {"name": "user", "email": "user@cn.ibm.com"}, "content": self.fn_base64(image_path), "sha":sha}
+            d = {"message": "update content", "committer": {"name": "user", "email": "user@gmail.com"}, "content": self.fn_base64(image_path), "sha":sha}
             r = requests.put(url = url, data = json.dumps(d), headers=headers)
             rs = r.status_code
             if rs == 200:
-                print('update success')
+                #print('update success')
+                pass
             else:
-                print('status==============' + str(rs) + "---------------------------"+ str(r.text))
+                #print('status==============' + str(rs) + "---------------------------"+ str(r.text))
+                print('update error')
                 
 
     def delete_data(self, image_name):
@@ -301,13 +305,15 @@ class FileSystemStorage(Storage):
 
         sha = self.get_sha(token, url)
 
-        d = {"message": "delete content", "committer": {"name": "user", "email": "user@cn.ibm.com"}, "sha":sha}
+        d = {"message": "delete content", "committer": {"name": "user", "email": "user@gmail.com"}, "sha":sha}
         r = requests.delete(url = url, data = json.dumps(d), headers=headers)
         rs = r.status_code
         if rs == 200:
-            print('delete success')
+            #print('delete success')
+            pass
         else:
-            print('status==============' + str(rs) + "---------------------------"+ str(r.text))
+            #print('status==============' + str(rs) + "---------------------------"+ str(r.text))
+            print('delete error')
 
     def _save(self, name, content):
         full_path = self.path(name)

@@ -6,4 +6,4 @@ Contributors
 ------------
 
 * Adam Dickens
-* Thomas (`@ThomasIBM <https://github.com/ThomasIBM/ibmBluepages>`_)
+* Thomas (`@ThomasGJL <https://github.com/ThomasGJL/django-github-storage>`_)
