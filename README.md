@@ -21,6 +21,9 @@ Tested on: Python 3.5+.
 
 This library is licensed under the [Apache 2.0 license][license].
 
+## Documentation
 
+The full documentation is [here][here]
 
 [license]: http://www.apache.org/licenses/LICENSE-2.0
+[here]: https://django-github-storage.readthedocs.io
