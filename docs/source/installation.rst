@@ -6,16 +6,7 @@ At the command line::
 
     $ pip install django-github-storage
 
-After installation, you need append ``django-github-storage`` to  ``INSTALLED_APPS`` in your settings.
-    
-    INSTALLED_APPS = (
-        ...
-        'django_github_storage',
-        ...
-	)
-    
-    
-    
+
 Quick start
 ===========
 
