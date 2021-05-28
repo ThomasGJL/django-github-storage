@@ -5,6 +5,12 @@ Settings
 This document describes the Django settings that can be used to customize the configuration
 of ``django-github-storage``.
 
+.. py:attribute:: DEFAULT_FILE_STORAGE
+
+   :default: ``django.core.files.storage.FileSystemStorage``
+
+   ``django_github_storage.storage.FileSystemStorage``
+
 .. py:attribute:: GIT_TOKEN
 
    :default: No default
