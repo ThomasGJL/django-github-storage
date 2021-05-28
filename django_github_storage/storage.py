@@ -268,7 +268,7 @@ class FileSystemStorage(Storage):
             r = requests.put(url = url, data = json.dumps(d), headers=headers)
             rs = r.status_code
             if rs == 201:
-                #print('update success')
+                #print('upload success')
                 pass
             else:
                 #print('status==============' + str(rs) + "---------------------------"+ str(r.text))
@@ -405,7 +405,7 @@ class FileSystemStorage(Storage):
             # concurrently.
             pass
         
-        print("name=======" + name)
+        #print("name=======" + name)
         self.delete_data(name)
 
 
